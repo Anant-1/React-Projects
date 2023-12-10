@@ -1,11 +1,7 @@
 import './App.css'
 import Dashboard from './components/Dashboard'
 import DashboardContext from './context/context'
-
-const user = {
-  isSubscribed: true,
-  name: 'Anant'
-}
+import {user} from './User/user'
 
 function App() {
   return (
