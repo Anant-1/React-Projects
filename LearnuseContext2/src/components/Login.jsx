@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import UserContext from '../context/UserContext'
 function Login() {
+  console.log('Login called')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const {setUser} = useContext(UserContext)
