@@ -8,10 +8,11 @@ function LeftNav() {
   // console.log('LeftNav')
   const {selectedCategory, setSelectedCategory, mobileMenu} = useContext(Context)
 
-  const clickHandler = (name, type)=>{
+  const navigate = useNavigate()
 
+  const clickHandler = (name, type)=>{
     if(type == 'category' || type == 'home'){      
-      setSelectedCategory(name)
+      setSelectedCategory(name) 
     }
   }
 
@@ -27,6 +28,7 @@ function LeftNav() {
                 icon={item.icon}
                 action={()=>{
                   clickHandler(item.name, item.type)
+                  navigate('/')
                 }}
                 className={`${selectedCategory === item.name ? 'bg-white/[0.15]' : ''}`}
                 />
