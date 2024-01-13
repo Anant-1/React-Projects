@@ -23,14 +23,14 @@ function VideoDetails() {
 
   const fetchVideoDetails = ()=>{
     setLoading(true)
-    fetchDataFromApi(`video/details/?id=${id}`).then((res)=>{
+    fetchDataFromApi(`video/details?id=${id}`).then((res)=>{
       setVideo(res)
       setLoading(false)
     })
   }
   const fetchRelatedVideos = ()=>{
     setLoading(true)
-    fetchDataFromApi(`video/related-contents/?id=${id}`).then(({contents})=>{
+    fetchDataFromApi(`video/related-contents?id=${id}`).then(({contents})=>{
       setRelatedVideo(contents)
       // console.log('related-video',contents)
       setLoading(false)
